@@ -1,0 +1,2 @@
+-- Haskell Playground 1.0
+fmap (+1) (Tuple 2 3)

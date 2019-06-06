@@ -1,0 +1,14 @@
+-- Haskell Playground 1.0
+success = Success (+1) <*> Success 1
+success == Success 2
+
+failure = Success (+1) <*> Failure [StackOverflow]
+failure == Failure [StackOverflow]
+
+failure' = Failure [StackOverflow] <*> Success (+1)
+failure' == Failure [StackOverflow]
+
+failures = Failure [MooglesChewedWires] <*> Failure [StackOverflow] 
+failures == Failure [MooglesChewedWires, StackOverflow]
+
+main

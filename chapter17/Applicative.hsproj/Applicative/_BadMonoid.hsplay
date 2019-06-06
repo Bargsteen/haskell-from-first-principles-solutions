@@ -1,0 +1,5 @@
+-- Haskell Playground 1.0
+main
+
+let xs = [("b", "w", 1)]
+quickBatch $ applicative xs

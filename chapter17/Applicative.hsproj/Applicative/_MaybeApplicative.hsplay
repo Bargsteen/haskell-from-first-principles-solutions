@@ -1,0 +1,27 @@
+-- Haskell Playground 1.0
+s = "old macdonals"
+addy = mkAddress s 
+addy 
+b = mkName "Babe" 
+b
+person = fmap Person b 
+person <*> addy
+
+
+Person <$> mkName "Babe" <*> mkAddress "old mcdonalds"
+
+p1 = Person <$> mkName "Booty" 
+p2 = p1 <*> mkAddress "Bootleg Road"
+p2
+p' = liftA2 Person (mkName "Tom") (mkAddress "GiidyRoad")
+p'
+
+cow1 = Cow <$> noEmpty "Bess"
+cow2 = cow1 <*> noNegative 1
+cow3 = cow2 <*> noNegative 2
+
+cow1 = liftA3 Cow
+cow2 = cow1 (noEmpty "blah")
+cow3 = cow2 (noNegative 1)
+cow4 = cow3 (noNegative 2)
+

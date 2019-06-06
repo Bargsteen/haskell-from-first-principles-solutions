@@ -1,0 +1,5 @@
+-- Haskell Playground 1.0
+combos stops vowels stops
+
+[1..3] >>= return . (+1)
+

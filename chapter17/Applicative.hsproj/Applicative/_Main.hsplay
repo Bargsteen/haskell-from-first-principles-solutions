@@ -1,0 +1,8 @@
+-- Haskell Playground 1.0
+:t lookup
+
+f 3
+g 8
+(++) <$> f 3 <*> g 7
+(+) <$> h 5 <*> m 1
+(+) <$> h 5 <*> m 6

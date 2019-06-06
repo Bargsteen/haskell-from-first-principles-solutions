@@ -1,0 +1,14 @@
+-- Haskell Playground 1.0
+added
+tupled
+
+maxed
+
+:t sum 
+:i (,)
+fmap sum (Just 3, Nothing)
+
+summed
+
+x4
+y4 

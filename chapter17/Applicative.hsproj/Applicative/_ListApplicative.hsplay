@@ -1,0 +1,29 @@
+-- Haskell Playground 1.0
+f = Cons (+1) (Cons (*2) Nil)
+v = Cons 1 (Cons 2 Nil)
+f <*> v
+
+
+fmap (\x -> [x, 9]) [1..3]
+
+toMyList = foldr Cons Nil
+xs = toMyList [1,2,3]
+c = Cons
+
+f x = x `c` (9 `c` Nil)
+flatMap f xs
+
+a = toMyList [1..5]
+:t liftA2
+
+liftA2 (2+) (Just 2)
+take' 3 a
+take' (-3) a
+
+
+zl' = ZipList'
+z = zl' $ toMyList [(+9), (*2), (+20)]
+z
+z' = zl' $ toMyList [1..3]
+z'
+z <*> z'
